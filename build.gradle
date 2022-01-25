@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.kartik.app'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+    implementation 'org.reflections:reflections:0.10.2'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.13.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
